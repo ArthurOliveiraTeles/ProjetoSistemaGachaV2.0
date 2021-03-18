@@ -1,5 +1,5 @@
 def roleta10(tiros):
-    lista = ['Venti', 'Keqing', 'Mona', 'Diluc', 'Klee']
+    lista = ['Venti', 'Keqing', 'Mona', 'Diluc', 'Klee', 'QiQi']
     charsPegos = []
     from random import randint
     for c in range(0, tiros):
