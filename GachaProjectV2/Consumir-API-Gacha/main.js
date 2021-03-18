@@ -22,12 +22,17 @@ function main() {
     var info = fazGet("http://localhost:2000/gacha")
     var usuarios = JSON.parse(info)
     
+    var p1 = document.getElementById("p1")
     var table = document.getElementById("tabela")
     
     usuarios.forEach(element => {
             var linha = criaLinha(element)
             table.appendChild(linha)  
     })
+
+    p1.innerHTML = "Para dar mais 10 tiros, clique abaixo..."
+    p1.style.color = "red";
+    p1.style.fontSize = "30px";
 }
 
 
