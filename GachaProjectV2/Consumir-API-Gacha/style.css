@@ -1,3 +1,26 @@
 td, tr, table {
     border: 1px solid black;
 }
+
+#principal {
+    width: 1024px;
+    background-color: rgba(130, 159, 238, 0.52);
+    border: none;
+    margin: auto;
+}
+
+#areaMenu {
+    list-style: none;
+    padding: 0px;
+}
+
+#titulo {
+    border: 1px solid red;
+    clear:both;
+}
+
+.opcoes {
+    width: 339.3px; /* ~(1024/3) */
+    border: 1px solid black;
+    float: left;
+}
