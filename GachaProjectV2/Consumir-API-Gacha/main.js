@@ -8,8 +8,11 @@ function fazGet(url,) {
 function criaLinha(usuario) {
     linha = document.createElement("tr")
     tdName = document.createElement("td")
+    tdImage = document.createElement("img")
 
-    tdName.innerHTML = usuario.name
+    tdImage.src = "imgs/venti.jpg"
+
+    tdName = tdImage
 
     linha.appendChild(tdName)
 
