@@ -10,7 +10,9 @@ function criaLinha(usuario) {
     tdName = document.createElement("td")
     tdImage = document.createElement("img")
 
-    tdImage.src = "imgs/venti.jpg"
+    var nomeChar = usuario.name
+
+    tdImage.src = `imgs/${nomeChar}.jpg`
 
     tdName = tdImage
 
@@ -39,6 +41,7 @@ function main() {
 }
 
 
+// A função que verifica tudo
 function verificar() {
     var tabela = document.getElementById("tabela").rows
 
