@@ -34,8 +34,11 @@ function main() {
 
     usuarios.forEach(element => {
             var div = criaDiv(element)
-            area.appendChild(div)
-            vetor.push(area)
+            vetor.push(div)
+            if (vetor.length <= 10) {
+                area.appendChild(div)
+            } 
+            
     })
 
     p1.innerHTML = "Para dar mais 10 tiros, clique abaixo..."
@@ -44,12 +47,12 @@ function main() {
 }
 
 
-function verificar(){
-    
+/*function verificar(){
+
     if(vetor.length >= 1) {
         var area = document.getElementById("areaGacha").remove()
     }
-}
+}*/
 
 
 /*
