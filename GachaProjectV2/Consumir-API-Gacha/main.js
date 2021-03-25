@@ -1,3 +1,5 @@
+let vetor = []
+
 function fazGet(url,) {
     var request = new XMLHttpRequest()
     request.open("GET" , url, false)
@@ -5,34 +7,35 @@ function fazGet(url,) {
     return request.responseText
 }
 
-function criaLinha(usuario) {
-    linha = document.createElement("tr")
-    tdName = document.createElement("td")
-    tdImage = document.createElement("img")
+function criaDiv(usuario) {
+    var div = document.createElement("div")
+    imagem = document.createElement("img")
 
     var nomeChar = usuario.name
 
-    tdImage.src = `imgs/${nomeChar}.jpg`
+    imagem.src = `imgs/${nomeChar}.jpg`
 
-    tdName = tdImage
+    div.appendChild(imagem)
 
-    linha.appendChild(tdName)
+    div.classList.add("personagens")
 
-    return linha
+    return div
 }
 
 function main() {
+
     //Faz a requisição GET para a minha API no LocalHost
         // Para acessar os dados da API, ler o "README.md"
     var info = fazGet("http://localhost:2000/gacha")
     var usuarios = JSON.parse(info)
     
     var p1 = document.getElementById("p1")
-    var table = document.getElementById("tabela")
-    
+    var area = document.getElementById("areaGacha")
+
     usuarios.forEach(element => {
-            var linha = criaLinha(element)
-            table.appendChild(linha)  
+            var div = criaDiv(element)
+            area.appendChild(div)
+            vetor.push(area)
     })
 
     p1.innerHTML = "Para dar mais 10 tiros, clique abaixo..."
@@ -41,6 +44,15 @@ function main() {
 }
 
 
+function verificar(){
+    
+    if(vetor.length >= 1) {
+        var area = document.getElementById("areaGacha").remove()
+    }
+}
+
+
+/*
 // A função que verifica tudo
 function verificar() {
     var tabela = document.getElementById("tabela").rows
@@ -58,4 +70,4 @@ function verificar() {
         }
         main()
     }
-}
+}*/
