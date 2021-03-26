@@ -1,4 +1,4 @@
-let vetor = []
+var matriz=Array(10).fill("")
 
 function fazGet(url,) {
     var request = new XMLHttpRequest()
@@ -7,19 +7,28 @@ function fazGet(url,) {
     return request.responseText
 }
 
-function criaDiv(usuario) {
-    var div = document.createElement("div")
-    imagem = document.createElement("img")
+function adicionaMatriz(element, matriz, posicao) {
+    console.log(matriz[posicao])
+    var nomeArquivo = element.name+".jpg"
+    matriz[posicao] = nomeArquivo
+}
 
-    var nomeChar = usuario.name
+function Preenche(matriz) {
+    var area = document.getElementById("areaGacha")
+    area.innerHTML = "" // Limpando o conteudo da div
 
-    imagem.src = `imgs/${nomeChar}.jpg`
+    for(var n=0; n<matriz.length;n++) {
+        var div = document.createElement("div")
+        var nomeArquivo = matriz[n]
+        var imagem = document.createElement("img")
+        imagem.src = 'imgs/' + nomeArquivo
 
-    div.appendChild(imagem)
+        div.appendChild(imagem)
+        area.appendChild(div)
+        div.classList.add("personagens")
+    }
 
-    div.classList.add("personagens")
-
-    return div
+    
 }
 
 function main() {
@@ -29,17 +38,16 @@ function main() {
     var info = fazGet("http://localhost:2000/gacha")
     var usuarios = JSON.parse(info)
     
-    var p1 = document.getElementById("p1")
-    var area = document.getElementById("areaGacha")
+    var p1 = document.getElementById("p1") 
+    var posicao = 0
 
     usuarios.forEach(element => {
-            var div = criaDiv(element)
-            vetor.push(div)
-            if (vetor.length <= 10) {
-                area.appendChild(div)
-            } 
-            
+            adicionaMatriz(element, matriz, posicao)
+               
+            posicao++
     })
+    Preenche(matriz)
+    
 
     p1.innerHTML = "Para dar mais 10 tiros, clique abaixo..."
     p1.style.color = "red";
