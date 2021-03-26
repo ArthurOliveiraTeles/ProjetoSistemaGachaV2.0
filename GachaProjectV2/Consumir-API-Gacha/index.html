@@ -27,12 +27,26 @@
         <div id="titulo">
             <h1>Jogo de Gacha v2.0</h1>
         </div>
-        <div id="areaGacha"></div>
 
-        <p id="p1">Você deseja dar 10 tiros? Clique em jogar.</p>
-
-        <input type="button" value="Jogar" onclick="main()">
+        <p id="p1">Seus tiros aparecerão em um campo abaixo!</p>
         
+        <div id="areaConteudo">
+            <div id="areaGacha"></div>
+        </div>
+        
+        <p id="p2">Você deseja dar 10 tiros? Clique em jogar.</p>
+
+        <div id="areaBotao">
+            <input id="botao" type="button" value="Jogar" onclick="Jogar()">
+        </div>
+
+        <div id="campoTiro">
+            <p id="qtdTiros">Tiros atuais: 0</p>
+        </div>
+
+        <!-- Criei isso para não ter problemas com o container principal-->
+        <div class="limpar"></div>
+
     </div>
     
     <script src="main.js"></script> <!-- Tem que colocar o script aqui, para renderizar as informações dps do body-->

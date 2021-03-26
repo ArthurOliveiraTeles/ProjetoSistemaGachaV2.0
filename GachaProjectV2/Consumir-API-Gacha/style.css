@@ -45,13 +45,53 @@ td, tr, table {
     clear:both;
 }
 
+.personagens {
+    float: left;
+    padding:26.4px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#areaConteudo {
+    margin-top: 10px;
+    /*border: 1px solid red;*/
+}
+
 #p1 {
-    color: black;
+    margin: auto;
+    text-align: center;
+    height: 5px;
     font-size: 20px;
+}
+
+#p2 {
+    color: black;
+    font-size: 25px;
+    float: left;
+}
+
+#campoTiro {
     clear: both;
 }
 
-.personagens {
-    float: left;
-    padding:26px;
+
+#qtdTiros {
+    font-size: 20px;
+    text-align: center;
+}
+
+.imagem {
+    border-radius: 10px;
+}
+
+#botao {
+    float: right;
+    border-radius: 40px;
+    width: 100px;
+    height: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.limpar {
+    clear: both;
 }

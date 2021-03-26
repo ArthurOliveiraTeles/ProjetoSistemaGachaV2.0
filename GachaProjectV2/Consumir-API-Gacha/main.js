@@ -1,19 +1,20 @@
 var matriz=Array(10).fill("")
+let cont = 0
 
-function fazGet(url,) {
+function FazGet(url,) {
     var request = new XMLHttpRequest()
     request.open("GET" , url, false)
     request.send()
     return request.responseText
 }
 
-function adicionaMatriz(element, matriz, posicao) {
+function AdicionaMatriz(element, matriz, posicao) {
     console.log(matriz[posicao])
     var nomeArquivo = element.name+".jpg"
     matriz[posicao] = nomeArquivo
 }
 
-function Preenche(matriz) {
+function CriaDiv(matriz) {
     var area = document.getElementById("areaGacha")
     area.innerHTML = "" // Limpando o conteudo da div
 
@@ -26,59 +27,48 @@ function Preenche(matriz) {
         div.appendChild(imagem)
         area.appendChild(div)
         div.classList.add("personagens")
+        imagem.classList.add("imagem")
     }
-
     
 }
 
-function main() {
-
+function Jogar() {
+    cont += 10 
     //Faz a requisição GET para a minha API no LocalHost
         // Para acessar os dados da API, ler o "README.md"
-    var info = fazGet("http://localhost:2000/gacha")
+    var info = FazGet("http://localhost:2000/gacha")
     var usuarios = JSON.parse(info)
     
-    var p1 = document.getElementById("p1") 
-    var posicao = 0
+    // Pegando o primeiro paragrafo
+    var mensagem = document.getElementById("p1")
+    mensagem.innerHTML = ""
+    mensagem.style.height = '0px'
+    
+    // Pegando a area de Conteudo e modificando
+    var areaConteudo = document.getElementById("areaConteudo")
+    areaConteudo.style.backgroundColor = 'rgba(0, 128, 0, 0.342)'
+    areaConteudo.style.height = '517px'
 
+    // Pegando o segundo paragrafo e modificando
+    var p2 = document.getElementById("p2") 
+    p2.innerHTML = "Para dar mais 10 tiros, clique ao lado..."
+    p2.style.color = "red";
+    p2.style.fontSize = "25px";
+    p2.style.marginBottom = "40px"
+
+    // Pegando o qtdTiros
+    var p3 = document.getElementById("qtdTiros")
+    p3.innerHTML = "Tiros atuais: " + cont
+
+    var posicao = 0
     usuarios.forEach(element => {
-            adicionaMatriz(element, matriz, posicao)
-               
+            // Adicionando todos os elementos da minha matriz usuarios ( via JSON ) na minha nova matriz
+            AdicionaMatriz(element, matriz, posicao)
             posicao++
     })
-    Preenche(matriz)
-    
-
-    p1.innerHTML = "Para dar mais 10 tiros, clique abaixo..."
-    p1.style.color = "red";
-    p1.style.fontSize = "30px";
+    // Somente depois de ter adicionado os 10 personagens (elementos) que eu chamo
+        // minha função CriaDiv() passando o argumento matriz para adicionar as imagens
+            // nas respectivas divs
+    CriaDiv(matriz)
 }
 
-
-/*function verificar(){
-
-    if(vetor.length >= 1) {
-        var area = document.getElementById("areaGacha").remove()
-    }
-}*/
-
-
-/*
-// A função que verifica tudo
-function verificar() {
-    var tabela = document.getElementById("tabela").rows
-
-    // Se o tamanho da minha tabela for igual a 0, ele chama a minha função main()
-        // e pega os dados da minha API em Python.
-    if(tabela.length== 0) {
-        main()
-    }
-    // Se for maior que 0, ou seja, se já foi jogado uma vez
-        // ele primeiro limpa toda a minha tabela e chama a função main().
-    else {
-        for(i = tabela.length - 1; i>=0; i--) {
-            document.getElementById("tabela").deleteRow(i)
-        }
-        main()
-    }
-}*/
