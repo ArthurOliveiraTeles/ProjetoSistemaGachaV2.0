@@ -2,9 +2,14 @@ td, tr, table {
     border: 1px solid black;
 }
 
+body {
+    background-image: url("imgs/fundoSite.png");
+    background-size: cover;
+}
+
 #principal {
     width: 1024px;
-    background-color: rgba(130, 159, 238, 0.52);
+    background-color: rgba(130, 159, 238);
     border: none;
     margin: auto;
 }
@@ -76,7 +81,11 @@ td, tr, table {
 
 #qtdTiros {
     font-size: 20px;
+    width: 130px;
+    margin-left: 455px;
+    border-radius: 10px;
     text-align: center;
+    background-color: white;
 }
 
 .imagem {
