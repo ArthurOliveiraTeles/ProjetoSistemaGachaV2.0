@@ -9,13 +9,14 @@ body {
 
 #principal {
     width: 1024px;
-    background-color: rgba(130, 159, 238);
+    background-color: #7bbad3;
     border: none;
     margin: auto;
 }
 
 #banner {
-    border: 1px solid mediumseagreen;
+    /*border: 1px solid mediumseagreen;*/
+    background-image: url("imgs/bannerSite.png");
     text-align: center;
     float: left;
     width: 1024px;
@@ -45,9 +46,24 @@ body {
 }
 
 #titulo {
-    border: 1px solid red;
+    border: 1px solid rgba(0, 0, 0, 0.089);
     text-align: center;
+    color: #093e6c;
+    background-color: #3095ba;
     clear:both;
+}
+
+#conteudoTitulo {
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 10px;
+    width: 400px;
+    margin-left: 320px;
+}
+
+#campoWelcome {
+    background-color: white;
+    height: 517px;
+    margin-top: 10px;
 }
 
 .personagens {
@@ -57,21 +73,50 @@ body {
 }
 
 #areaConteudo {
+    border-radius: 10px;
+    background-color: #3095ba ;
+    float: left;
+    margin: 10px 0px 0px 0px;
+    margin-left: 20px;
+    width: 980px;
+    height: 60px;
+}
+
+#areaConteudo2 {
     margin-top: 10px;
     /*border: 1px solid red;*/
 }
 
 #p1 {
+    border-radius: 10px;
     margin: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.733);
     text-align: center;
-    height: 5px;
     font-size: 20px;
 }
 
 #p2 {
     color: black;
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
     font-size: 25px;
     float: left;
+}
+
+#campoTexto {
+    float: left;
+    border-radius: 10px;
+    background-color: #3095baad;
+    width: 455px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 #campoTiro {
@@ -83,9 +128,10 @@ body {
     font-size: 20px;
     width: 130px;
     margin-left: 455px;
+    margin-top: 150px;
     border-radius: 10px;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.733);
 }
 
 .imagem {
@@ -98,7 +144,7 @@ body {
     width: 100px;
     height: 50px;
     margin-right: 50px;
-    margin-top: 15px;
+    margin-top: 40px;
 }
 
 .limpar {

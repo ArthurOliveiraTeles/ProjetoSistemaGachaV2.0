@@ -43,18 +43,28 @@ function Jogar() {
     var mensagem = document.getElementById("p1")
     mensagem.innerHTML = ""
     mensagem.style.height = '0px'
+
+    // Pegando o campo welcome
+        // Quando essa função for acionada
+            // ela esconderá o campoWelcome
+    var escondeCampo = document.getElementById("campoWelcome")
+    escondeCampo.style.display = "none"
     
     // Pegando a area de Conteudo e modificando
-    var areaConteudo = document.getElementById("areaConteudo")
-    areaConteudo.style.backgroundColor = 'rgba(0, 128, 0, 0.342)'
+    var areaConteudo = document.getElementById("areaConteudo2")
+    areaConteudo.style.backgroundColor = '#2b6ba0'
     areaConteudo.style.height = '517px'
+
+    // Pegando o campo da div p2
+    var campoTexto = document.getElementById("campoTexto")
+    campoTexto.style.height = "80px"
+    campoTexto.style.width = "420px"
 
     // Pegando o segundo paragrafo e modificando
     var p2 = document.getElementById("p2") 
     p2.innerHTML = "Para dar mais 10 tiros, clique ao lado..."
-    p2.style.color = "red";
+    //p2.style.color = "red";
     p2.style.fontSize = "25px";
-    p2.style.marginBottom = "40px"
 
     // Pegando o qtdTiros
     var p3 = document.getElementById("qtdTiros")

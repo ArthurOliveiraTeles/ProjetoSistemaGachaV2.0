@@ -10,43 +10,51 @@
 </head>
 <body>
     <div id="principal">
-        <!--Banner-->
-        <div id="banner">
-            Jogo de Gacha
+        <div id="areaPrincipal">
+            <!--Banner-->
+            <div id="banner">
+            </div>
+
+            <!--Três menus no topo do site-->
+            <div>
+                <ul id="areaMenu">
+                    <li class="opcoes"><a class="textOpc" href="">Menu</a></li>
+                    <li class="opcoes"><a class="textOpc" href="">Sobre o site</a></li>
+                    <li class="opcoes"><a class="textOpc" href="">Informações adicionais</a></li>
+                </ul>
+            </div>
+
+            <div id="titulo">
+                <h1 id="conteudoTitulo">Jogo de Gacha v2.0</h1>
+            </div>
+
+            <div id="campoWelcome">
+                <div id="areaConteudo">
+                    <p id="p1">
+                        Olá! Seja bem vindo ao "Sky Gacha". Os seus tiros irão aparecer nesse
+                        campo ao clicar em jogar.
+                    </p>
+                </div>
+            </div>
+            
+            <div id="areaConteudo2">
+                <div id="areaGacha"></div>
+            </div>
+            
+            <div id="campoTexto">
+                <p id="p2">Você deseja dar 10 tiros? Clique em jogar.</p>
+            </div>    
+            <div id="areaBotao">
+                <input id="botao" type="button" value="Jogar" onclick="Jogar()">
+            </div>
+
+            <div id="campoTiro">
+                <p id="qtdTiros">Tiros atuais: 0</p>
+            </div>
+
+            <!-- Criei isso para não ter problemas com o container principal-->
+            <div class="limpar"></div>
         </div>
-
-        <!--Três menus no topo do site-->
-        <div>
-            <ul id="areaMenu">
-                <li class="opcoes"><a class="textOpc" href="">Menu</a></li>
-                <li class="opcoes"><a class="textOpc" href="">Sobre o site</a></li>
-                <li class="opcoes"><a class="textOpc" href="">Informações adicionais</a></li>
-            </ul>
-        </div>
-
-        <div id="titulo">
-            <h1>Jogo de Gacha v2.0</h1>
-        </div>
-
-        <p id="p1">Seus tiros aparecerão em um campo abaixo!</p>
-        
-        <div id="areaConteudo">
-            <div id="areaGacha"></div>
-        </div>
-        
-        <p id="p2">Você deseja dar 10 tiros? Clique em jogar.</p>
-
-        <div id="areaBotao">
-            <input id="botao" type="button" value="Jogar" onclick="Jogar()">
-        </div>
-
-        <div id="campoTiro">
-            <p id="qtdTiros">Tiros atuais: 0</p>
-        </div>
-
-        <!-- Criei isso para não ter problemas com o container principal-->
-        <div class="limpar"></div>
-
     </div>
     
     <script src="main.js"></script> <!-- Tem que colocar o script aqui, para renderizar as informações dps do body-->
