@@ -53,7 +53,8 @@ function Jogar() {
 function alteraMensagem() {
     // Pegando a mensagem de boas vindas
     var mudaMensagem = document.getElementById("conteudoTitulo")
-    mudaMensagem.innerHTML = "Aqui estão seus tiros"
+    mudaMensagem.innerHTML = "Aqui estão seus tiros!"
+    mudaMensagem.style.marginLeft = "390px"
     
     // Pegando o primeiro paragrafo
     var mensagem = document.getElementById("p1")
