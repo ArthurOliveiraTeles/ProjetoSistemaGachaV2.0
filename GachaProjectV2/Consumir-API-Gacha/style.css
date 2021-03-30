@@ -62,20 +62,14 @@ body {
 #conteudoTitulo {
     float: left;
     margin: auto;
-    margin-left: 375px;
+    margin-left: 410px;
     margin-top: 15px;
 }
 
-#campoWelcome {
+#areaWelcome {
     background-color: white;
     height: 517px;
     margin-top: 10px;
-}
-
-.personagens {
-    float: left;
-    padding:26.4px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 #conteudoWelcome {
@@ -86,6 +80,23 @@ body {
     width: 980px;
     height: 60px;
 }
+
+#conteudoWelcome2 {
+
+    float:left;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 980px;
+    height: 420px;
+}
+
+.personagens {
+    float: left;
+    padding:26.4px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
 
 #areaConteudo2 {
     margin-top: 10px;
@@ -105,16 +116,27 @@ body {
 #texto1 {
     float: left;
     margin-top: 10px;
-    margin-left: 93px;
+    margin-left: 170px;
+}
+
+#texto2 {
+    float: left;
+    margin-top: 20px;
+    font-size: 22px;
+    margin-left: 35px;
+}
+
+#areaTexto {
+    float: left;
+    border-radius: 10px;
+    margin: 5px 5px 5px 5px;
+    height: 68.5px;
 }
 
 #p2 {
-    color: black;
-    border-radius: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 25px;
     float: left;
+    margin: auto;
+    width: 445px;
 }
 
 #campoTexto {

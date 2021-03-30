@@ -33,42 +33,10 @@ function CriaDiv(matriz) {
 }
 
 function Jogar() {
-    cont += 10 
     //Faz a requisição GET para a minha API no LocalHost
         // Para acessar os dados da API, ler o "README.md"
     var info = FazGet("http://localhost:2000/gacha")
     var usuarios = JSON.parse(info)
-    
-    // Pegando o primeiro paragrafo
-    var mensagem = document.getElementById("p1")
-    mensagem.innerHTML = ""
-    mensagem.style.height = '0px'
-
-    // Pegando o campo welcome
-        // Quando essa função for acionada
-            // ela esconderá o campoWelcome
-    var escondeCampo = document.getElementById("campoWelcome")
-    escondeCampo.style.display = "none"
-    
-    // Pegando a area de Conteudo e modificando
-    var areaConteudo = document.getElementById("areaConteudo2")
-    areaConteudo.style.backgroundColor = '#2b6ba0'
-    areaConteudo.style.height = '517px'
-
-    // Pegando o campo da div p2
-    var campoTexto = document.getElementById("campoTexto")
-    campoTexto.style.height = "80px"
-    campoTexto.style.width = "420px"
-
-    // Pegando o segundo paragrafo e modificando
-    var p2 = document.getElementById("p2") 
-    p2.innerHTML = "Para dar mais 10 tiros, clique ao lado..."
-    //p2.style.color = "red";
-    p2.style.fontSize = "25px";
-
-    // Pegando o qtdTiros
-    var p3 = document.getElementById("qtdTiros")
-    p3.innerHTML = "Tiros atuais: " + cont
 
     var posicao = 0
     usuarios.forEach(element => {
@@ -82,3 +50,36 @@ function Jogar() {
     CriaDiv(matriz)
 }
 
+function alteraMensagem() {
+    // Pegando a mensagem de boas vindas
+    var mudaMensagem = document.getElementById("conteudoTitulo")
+    mudaMensagem.innerHTML = "Aqui estão seus tiros"
+    
+    // Pegando o primeiro paragrafo
+    var mensagem = document.getElementById("p1")
+    mensagem.innerHTML = ""
+    mensagem.style.height = '0px'
+
+    // Pegando o campo welcome
+        // Quando essa função for acionada
+            // ela esconderá o campoWelcome
+    var escondeCampo = document.getElementById("areaWelcome")
+    escondeCampo.style.display = "none"
+    
+    // Pegando a area de Conteudo e modificando
+    var areaConteudo = document.getElementById("areaConteudo2")
+    areaConteudo.style.backgroundColor = '#2b6ba0'
+    areaConteudo.style.height = '517px'
+
+    // Pegando o segundo paragrafo e modificando
+    var texto2 = document.getElementById("texto2") 
+    texto2.innerHTML = "Para dar mais 10 tiros, clique ao lado..."
+    texto2.style.fontSize = "22px"
+    texto2.style.marginLeft = "55px"
+
+    cont += 10 
+
+    // Pegando o qtdTiros
+    var p3 = document.getElementById("qtdTiros")
+    p3.innerHTML = "Tiros atuais: " + cont
+}
