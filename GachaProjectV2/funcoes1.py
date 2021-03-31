@@ -1,5 +1,5 @@
 def roleta10(tiros):
-    lista = ['nat5', 'nat4', 'nat4', 'arma'] # indices 0, 1 e 2 / len = 3
+    lista = ['nat5', 'nat4', 'arma'] # indices 0, 1 e 2 / len = 3
 
     # Defini a lista aqui em cima para não dar problema ao adicionar
     # esses personagens nat4 na minha lista2
@@ -7,7 +7,7 @@ def roleta10(tiros):
                     'lisa', 'ningguang', 'noelle', 'razor', 'sucrose', 'xingqiu', 'xiangling',
                     'diona', 'xinyan']
 
-    for c in range(0, 5): # Adiciona mais 5 valores de arma para a lista.
+    for c in range(0, 6): # Adiciona mais 5 valores de arma para a lista.
         lista.append('arma')
 
     lista2 = [] # essa é a minha lista definitiva que vai ser mandada
@@ -31,17 +31,13 @@ def roleta10(tiros):
                 lista2 += [personagens5[escolhe_char5]]
 
 
-        elif pool == 1 or pool == 2:
+        elif pool == 1:
             # aqui eu estou dentro dos tiros dos personagens 4 estrelas / nat4.
             # criei também outra variável denominada "sorte2" para dificultar
             # a aquisição de um personagem 4 estrelas.
 
-            sorte2 = randint(0, 2)
-            if sorte2 == 0 or sorte2 == 1:
-                lista2 += ['arma']
-            else:
-                escolhe_char4 = randint(0, len(personagens4) - 1)
-                lista2 += [personagens4[escolhe_char4]]
+            escolhe_char4 = randint(0, len(personagens4) - 1)
+            lista2 += [personagens4[escolhe_char4]]
 
         else:
             # se não for nenhum dos tiros de personagens nat 5 e nat 4
@@ -49,8 +45,14 @@ def roleta10(tiros):
             # porém, um tiro de 10 como regra do jogo nunca pode vir somente armas.
                 # para isso eu verifiquei, se a quantidade de arma for == 9
                     # adiciona um dos personagens 4 estrelas garantido.
-            if lista2.count('arma') < 9:
-                lista2 += ['arma']
+            if lista2.count('arma') or lista2.count('arma1') or lista2.count('arma2') < 9:
+                escolhe_arma = randint(0, 2)
+                if escolhe_arma == 0:
+                    lista2 += ['arma']
+                elif escolhe_arma == 1:
+                    lista2 += ['arma1']
+                else:
+                    lista2 += ['arma2']
 
             if lista2.count('arma') >= 9:
                 escolhe_char = randint(0, len(personagens4) - 1)
