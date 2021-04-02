@@ -13,5 +13,8 @@ def gachaSystem():
 
     return jsonify(chars)
 
+if __name__ == "Youtube":
+    app.run(debug=True)
+
 app.run() # acessar como localhost:2000/gacha
 
