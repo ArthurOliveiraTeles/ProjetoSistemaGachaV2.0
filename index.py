@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_cors import CORS
 from funcoes1 import roleta10
 
@@ -11,7 +11,7 @@ def gachaSystem():
 
     chars = roleta10(10)
 
-    return jsonify(chars)
+    return teste
 
 if __name__ == "Youtube":
     app.run(debug=True)
