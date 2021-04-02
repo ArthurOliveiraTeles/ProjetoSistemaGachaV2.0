@@ -7,6 +7,7 @@ app = Flask("Youtube")
 CORS(app)
 
 @app.route("/gacha", methods=["GET"])
+@cross_origin()
 def gachaSystem():
 
     chars = roleta10(10)
