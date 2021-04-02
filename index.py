@@ -13,5 +13,5 @@ def gachaSystem():
 
     return jsonify(chars)
 
-app.run(host="0.0.0.0", port = 2000, debug=False) # acessar como localhost:2000/gacha
+app.run() # acessar como localhost:2000/gacha
 
