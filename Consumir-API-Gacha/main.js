@@ -47,7 +47,7 @@ function CriaDiv(matriz) {
 function Jogar() {
     //Faz a requisição GET para a minha API no LocalHost
         // Para acessar os dados da API, ler o "README.md"
-    var info = FazGet("http://localhost:2000/gacha")
+    var info = FazGet("http://localhost:5000/gacha")
     var usuarios = JSON.parse(info)
 
     var posicao = 0
