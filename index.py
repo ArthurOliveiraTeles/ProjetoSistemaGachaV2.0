@@ -6,7 +6,7 @@ from funcoes1 import roleta10
 app = Flask("__name__")
 CORS(app)
 
-@app.route()
+@app.route("/")
 def index():
 
     chars = roleta10(10)
