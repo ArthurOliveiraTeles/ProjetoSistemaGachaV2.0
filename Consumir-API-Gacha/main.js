@@ -47,7 +47,7 @@ function CriaDiv(matriz) {
 function Jogar() {
     //Faz a requisição GET para a minha API no LocalHost
         // Para acessar os dados da API, ler o "README.md"
-    var info = FazGet("http://localhost:5000/gacha")
+    var info = FazGet("https://skygacha-project.vercel.app")
     var usuarios = JSON.parse(info)
 
     var posicao = 0
