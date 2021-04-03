@@ -23,8 +23,8 @@ def roleta10(tiros):
             # estou dentro do tiro 0, ou seja o tiro do 5 estrelas
             # criei uma variavel "sorte" para dificultar a aquisição do personagem
             # 5 estrelas.
-            sorte = randint(0, 3)
-            if sorte == 0 or sorte == 1 or sorte == 2:
+            sorte = randint(0, 6)
+            if sorte == 0 or sorte == 1 or sorte == 2 or sorte == 3 or sorte == 4 or sorte == 5:
                 lista2 += ['arma']
             else:
                 escolhe_char5 = randint(0, len(personagens5) - 1)
