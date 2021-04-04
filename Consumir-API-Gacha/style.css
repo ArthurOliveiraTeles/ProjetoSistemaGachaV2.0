@@ -206,6 +206,18 @@ img {
     transform: scale(1.2);
 }
 
+#areaGacha .imagem {
+    transform: translateZ(0); /* isso aqui funciona para o CSS não embaçar a imagem*/
+    backface-visibility: hidden;
+    -webkit-transition-duration: 0.10s;
+}
+
+#areaGacha .imagem:hover{ /*peguei imagem em vez de .personagens, pois assim
+    o efeito será aplicado apenas na imagem e não na div que possui borda*/
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
 
 .personagens {
     float: left;

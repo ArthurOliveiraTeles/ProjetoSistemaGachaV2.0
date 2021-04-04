@@ -1,5 +1,33 @@
 var matriz=Array(10).fill("")
+var titulos=Array(25)
 let cont = 0
+
+titulos[0] = "Arma"
+titulos[1] = "Hu Tao"
+titulos[2] = "Jean"
+titulos[3] = "Amber"
+titulos[4] = "Barbara"
+titulos[5] = "Beidou"
+titulos[6] = "Bennet"
+titulos[7] = "Diluc"
+titulos[8] = "Chongyun"
+titulos[9] = "Fischl"
+titulos[10] = "Kaeya"
+titulos[11] = "Lisa"
+titulos[12] = "Ningguang"
+titulos[13] = "Noelle"
+titulos[14] = "Razor"
+titulos[15] = "Sucrose"
+titulos[16] = "Xingqiu"
+titulos[17] = "Xiangling"
+titulos[18] = "Diona"
+titulos[19] = "Xinyan"
+titulos[20] = "Venti"
+titulos[21] = "Keqing"
+titulos[22] = "QiQi"
+titulos[23] = "Mona"
+titulos[24] = "Albedo"
+
 
 function FazGet(url,) {
     var request = new XMLHttpRequest()
@@ -40,6 +68,32 @@ function CriaDiv(matriz) {
         area.appendChild(div)
         div.classList.add("personagens")
         imagem.classList.add("imagem")
+
+        if(nomeArquivo.includes("arma")) {imagem.title=titulos[0]}
+        if(nomeArquivo.includes("hutao")) {imagem.title=titulos[1]}
+        if(nomeArquivo.includes("jean")) {imagem.title=titulos[2]}
+        if(nomeArquivo.includes("amber")) {imagem.title=titulos[3]}
+        if(nomeArquivo.includes("barbara")) {imagem.title=titulos[4]}
+        if(nomeArquivo.includes("beidou")) {imagem.title=titulos[5]}
+        if(nomeArquivo.includes("bennet")) {imagem.title=titulos[6]}
+        if(nomeArquivo.includes("diluc")) {imagem.title=titulos[7]}
+        if(nomeArquivo.includes("chongyun")) {imagem.title=titulos[8]}
+        if(nomeArquivo.includes("fischl")) {imagem.title=titulos[9]}
+        if(nomeArquivo.includes("kaeya")) {imagem.title=titulos[10]}
+        if(nomeArquivo.includes("lisa")) {imagem.title=titulos[11]}
+        if(nomeArquivo.includes("ningguang")) {imagem.title=titulos[12]}
+        if(nomeArquivo.includes("noelle")) {imagem.title=titulos[13]}
+        if(nomeArquivo.includes("razor")) {imagem.title=titulos[14]}
+        if(nomeArquivo.includes("sucrose")) {imagem.title=titulos[15]}
+        if(nomeArquivo.includes("xingqiu")) {imagem.title=titulos[16]}
+        if(nomeArquivo.includes("xiangling")) {imagem.title=titulos[17]}
+        if(nomeArquivo.includes("diona")) {imagem.title=titulos[18]}
+        if(nomeArquivo.includes("xinyan")) {imagem.title=titulos[19]}
+        if(nomeArquivo.includes("venti")) {imagem.title=titulos[20]}
+        if(nomeArquivo.includes("keqing")) {imagem.title=titulos[21]}
+        if(nomeArquivo.includes("qiqi")) {imagem.title=titulos[22]}
+        if(nomeArquivo.includes("mona")) {imagem.title=titulos[23]}
+        if(nomeArquivo.includes("albedo")) {imagem.title=titulos[24]}
     }
     
 }
