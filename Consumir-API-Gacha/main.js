@@ -68,7 +68,7 @@ function alteraMensagem() {
     var mudaMensagem = document.getElementById("conteudoTitulo")
 
     mudaMensagem.innerHTML = "Aqui estão seus tiros!"
-    mudaMensagem.style.marginLeft = "390px"
+    //mudaMensagem.style.marginLeft = "385px"
     
     // Pegando o primeiro paragrafo
     var mensagem = document.getElementById("p1")
