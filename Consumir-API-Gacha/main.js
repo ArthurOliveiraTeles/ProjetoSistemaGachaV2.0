@@ -51,7 +51,7 @@ function AdicionaMatriz(element, matriz, posicao) {
 
     // Pegando o qtdTiros
     var p3 = document.getElementById("qtdTiros")
-    p3.innerHTML = "Tiros atuais: " + cont
+    p3.innerHTML = "Desejos atuais: " + cont
 }
 
 function CriaDiv(matriz) {
@@ -70,30 +70,55 @@ function CriaDiv(matriz) {
         imagem.classList.add("imagem")
 
         if(nomeArquivo.includes("arma")) {imagem.title=titulos[0]}
+        
         if(nomeArquivo.includes("hutao")) {imagem.title=titulos[1]}
+
         if(nomeArquivo.includes("jean")) {imagem.title=titulos[2]}
+
         if(nomeArquivo.includes("amber")) {imagem.title=titulos[3]}
+
         if(nomeArquivo.includes("barbara")) {imagem.title=titulos[4]}
+
         if(nomeArquivo.includes("beidou")) {imagem.title=titulos[5]}
+
         if(nomeArquivo.includes("bennet")) {imagem.title=titulos[6]}
+
         if(nomeArquivo.includes("diluc")) {imagem.title=titulos[7]}
+
         if(nomeArquivo.includes("chongyun")) {imagem.title=titulos[8]}
+
         if(nomeArquivo.includes("fischl")) {imagem.title=titulos[9]}
+
         if(nomeArquivo.includes("kaeya")) {imagem.title=titulos[10]}
+
         if(nomeArquivo.includes("lisa")) {imagem.title=titulos[11]}
+
         if(nomeArquivo.includes("ningguang")) {imagem.title=titulos[12]}
+
         if(nomeArquivo.includes("noelle")) {imagem.title=titulos[13]}
+
         if(nomeArquivo.includes("razor")) {imagem.title=titulos[14]}
+
         if(nomeArquivo.includes("sucrose")) {imagem.title=titulos[15]}
+
         if(nomeArquivo.includes("xingqiu")) {imagem.title=titulos[16]}
+
         if(nomeArquivo.includes("xiangling")) {imagem.title=titulos[17]}
+
         if(nomeArquivo.includes("diona")) {imagem.title=titulos[18]}
+
         if(nomeArquivo.includes("xinyan")) {imagem.title=titulos[19]}
+
         if(nomeArquivo.includes("venti")) {imagem.title=titulos[20]}
+
         if(nomeArquivo.includes("keqing")) {imagem.title=titulos[21]}
+
         if(nomeArquivo.includes("qiqi")) {imagem.title=titulos[22]}
+
         if(nomeArquivo.includes("mona")) {imagem.title=titulos[23]}
+
         if(nomeArquivo.includes("albedo")) {imagem.title=titulos[24]}
+
     }
     
 }
@@ -121,7 +146,7 @@ function alteraMensagem() {
     // Pegando a mensagem de boas vindas
     var mudaMensagem = document.getElementById("conteudoTitulo")
 
-    mudaMensagem.innerHTML = "Aqui estão seus tiros!"
+    mudaMensagem.innerHTML = "Aqui está o resultado de seus desejos!"
     //mudaMensagem.style.marginLeft = "385px"
     
     // Pegando o primeiro paragrafo

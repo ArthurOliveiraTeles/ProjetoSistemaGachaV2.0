@@ -143,7 +143,7 @@ body {
     float: right;
     margin-bottom: 5px;
     margin-right: 20px;
-    color: rgb(224, 210, 81);
+    color: rgb(224, 179, 81);
 }
 
 .amostra {
@@ -283,7 +283,7 @@ img {
 
 #qtdTiros {
     font-size: 20px;
-    width: 130px;
+    width: 160px;
     margin-left: 455px;
     margin-top: 150px;
     border-radius: 10px;
