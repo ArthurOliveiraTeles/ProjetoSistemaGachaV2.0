@@ -248,10 +248,8 @@ img {
 }
 
 #texto2 {
-    float: left;
     margin-top: 20px;
     font-size: 20px;
-    margin-left: 35px;
 }
 
 #areaTexto {
@@ -262,8 +260,9 @@ img {
 }
 
 #p2 {
-    float: left;
+    text-align: center;
     margin: auto;
+    margin-top: 20px;
     width: 445px;
 }
 

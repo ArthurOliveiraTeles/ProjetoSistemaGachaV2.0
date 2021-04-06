@@ -168,8 +168,7 @@ function alteraMensagem() {
 
     // Pegando o segundo paragrafo e modificando
     var texto2 = document.getElementById("texto2") 
-    texto2.innerHTML = "Para dar mais 10 tiros, clique ao lado..."
+    texto2.innerHTML = "Para dar mais 10 desejos, clique ao lado..."
     texto2.style.fontSize = "20px"
-    texto2.style.marginLeft = "55px"
 
 }
