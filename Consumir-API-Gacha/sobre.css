@@ -84,6 +84,12 @@ body {
 #texto1 {
     margin-top: 10px;
     font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#p1 {
+    clear: both;
+    margin-left: 10px;
 }
 
 .corFundo1 {
